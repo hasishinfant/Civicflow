@@ -56,6 +56,10 @@ function Home({ currentPage, setCurrentPage, issues = [] }) {
 
         </div>
 
+        <div className="hero-image-container">
+          <img src="/images/hero_smart_city.png" alt="Smart City Command Center" className="hero-banner-img" />
+        </div>
+
       </section>
 
 
@@ -161,7 +165,9 @@ function Home({ currentPage, setCurrentPage, issues = [] }) {
         <div className="problem-grid">
 
           <div className="problem-card">
-            <div>🕳️</div>
+            <div className="card-image-wrapper">
+              <img src="/images/road_damage.png" alt="Road Damage" className="problem-img" />
+            </div>
             <h3>Road Damage</h3>
             <p>
               Potholes and damaged roads affecting
@@ -171,7 +177,9 @@ function Home({ currentPage, setCurrentPage, issues = [] }) {
 
 
           <div className="problem-card">
-            <div>🚰</div>
+            <div className="card-image-wrapper">
+              <img src="/images/water_leakage.png" alt="Water Leakage" className="problem-img" />
+            </div>
             <h3>Water Leakage</h3>
             <p>
               Water leaks that require immediate
@@ -181,7 +189,9 @@ function Home({ currentPage, setCurrentPage, issues = [] }) {
 
 
           <div className="problem-card">
-            <div>🗑️</div>
+            <div className="card-image-wrapper">
+              <img src="/images/waste_overflow.png" alt="Waste Overflow" className="problem-img" />
+            </div>
             <h3>Waste Overflow</h3>
             <p>
               Overflowing waste and garbage collection
@@ -191,8 +201,10 @@ function Home({ currentPage, setCurrentPage, issues = [] }) {
 
 
           <div className="problem-card">
-            <div>💡</div>
-            <h3>Streetlight</h3>
+            <div className="card-image-wrapper">
+              <img src="/images/streetlight_repair.png" alt="Streetlight Failure" className="problem-img" />
+            </div>
+            <h3>Streetlight Failure</h3>
             <p>
               Broken streetlights affecting public
               areas.

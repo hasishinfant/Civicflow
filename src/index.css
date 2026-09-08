@@ -80,12 +80,31 @@
     min-height: 570px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    gap: 40px;
     padding: 80px 10%;
     background: #eef2f3;
   }
   
   .hero-content {
-    max-width: 760px;
+    max-width: 560px;
+    flex-shrink: 0;
+  }
+
+  .hero-image-container {
+    flex: 1;
+    max-width: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-banner-img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+    object-fit: cover;
   }
   
   .tag {
@@ -187,6 +206,15 @@
     padding: 30px;
     border: 1px solid #e5e7eb;
     border-radius: 12px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: default;
+    overflow: hidden;
+  }
+
+  .problem-card:hover,
+  .workflow-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   }
   
   .workflow-card span {
@@ -215,8 +243,23 @@
     gap: 20px;
   }
   
-  .problem-card div {
-    font-size: 35px;
+  .card-image-wrapper {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 5px;
+  }
+
+  .problem-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+  }
+
+  .problem-card:hover .problem-img {
+    transform: scale(1.06);
   }
   
   .cta {
@@ -486,8 +529,29 @@
       display: none;
     }
   
+    .hero {
+      flex-direction: column;
+      text-align: center;
+    }
+
     .hero h1 {
       font-size: 42px;
+    }
+
+    .hero-content {
+      max-width: 100%;
+    }
+
+    .hero-image-container {
+      max-width: 100%;
+    }
+
+    .hero-description {
+      max-width: 100%;
+    }
+
+    .hero-buttons {
+      justify-content: center;
     }
   
     .stats,
@@ -516,6 +580,14 @@
     .report-page,
     .dashboard-page {
       padding: 50px 6%;
+    }
+
+    .hero h1 {
+      font-size: 32px;
+    }
+
+    .card-image-wrapper {
+      height: 160px;
     }
   
   }
